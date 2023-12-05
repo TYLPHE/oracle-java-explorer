@@ -12,17 +12,9 @@ public class Main {
 
         // Exercise 3.2
         Customer c1 = new Customer();
-        c1.name = "Pinky";
-        c1.size = "S";
-        System.out.println("c1.name = " + c1.name);
-
-        // Exercise 4.1
-        switch (measurement) {
-            case 1, 2, 3 -> c1.size = "S";
-            case 4, 5, 6 -> c1.size = "M";
-            case 7, 8, 0 -> c1.size = "L";
-            default -> c1.size = "X";
-        }
+        c1.setName("Pinky");
+        c1.setSize(3);
+        System.out.println("c1.getName() = " + c1.getName());
 
         // Exercise 3.3
         Clothing item1 = new Clothing();
@@ -33,35 +25,38 @@ public class Main {
         // Exercise 4.2
         Clothing[] items = {item1, item2, item3, item4};
 
-        item1.description = "Blue Jacket";
-        item1.price = 20.9;
-        item1.size = "M";
+        item1.setDescription("Blue Jacket");
+        item1.setPrice(20.9);
+        item1.setSize("M");
 
-        item2.description = "Orange T-Shirt";
-        item2.price = 10.5;
-        item2.size = "S";
+        item2.setDescription("Orange T-Shirt");
+        item2.setPrice(10.5);
+        item2.setSize("S");
 
-        item3.description = "Green Scarf";
-        item3.price = 5;
-        item3.size = "S";
+        item3.setDescription("Green Scarf");
+        item3.setPrice(5);
+        item3.setSize("S");
 
-        item4.description = "Blue T-Shirt";
-        item4.price = 10.5;
-        item4.size = "S";
+        item4.setDescription("Blue T-Shirt");
+        item4.setPrice(10.5);
+        item4.setSize("S");
 
         // Exercise 4.3
 //        System.out.println("item1 = " + item1.description + ", $" + item1.price + ", Size:" + item1.size);
 //        System.out.println("item2 = " + item2.description + ", $" + item2.price + ", Size:" + item2.size);
 //        total = item1.price + item2.price * 2 + ((item1.price + item2.price * 2) * TAX);
         for (Clothing item : items) {
-            if (item.size.equals(c1.size)) {
-                System.out.println(item.description + ", $" + item.price + ", Size:" + item.size);
-                total += item.price * (1 + TAX);
+            if (item.getSize().equals(c1.getSize())) {
+                System.out.println(item.getDescription() + ", $" + item.getPrice() + ", Size:" + item.getSize());
+//                total += item.getPrice() * (1 + TAX);
+                total += item.getPrice();
                 if (total > 15) {
                     break;
                 }
             }
         }
         System.out.println("total = $" + total);
+
+        item4.setPrice(1);
     }
 }
