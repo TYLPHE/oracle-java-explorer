@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
 
         final double TAX = 0.2;
-        double total;
+        double total = 0;
         int measurement = 3;
 
         // Exercise 3.1
@@ -27,25 +27,41 @@ public class Main {
         // Exercise 3.3
         Clothing item1 = new Clothing();
         Clothing item2 = new Clothing();
+        Clothing item3 = new Clothing();
+        Clothing item4 = new Clothing();
+
+        // Exercise 4.2
+        Clothing[] items = {item1, item2, item3, item4};
 
         item1.description = "Blue Jacket";
         item1.price = 20.9;
         item1.size = "M";
 
-        // Exercise 4.2
-        Clothing[] items = {item1, item2};
-
         item2.description = "Orange T-Shirt";
         item2.price = 10.5;
         item2.size = "S";
 
-        System.out.println("item1 = " + item1.description + ", $" + item1.price + ", Size:" + item1.size);
-        System.out.println("item2 = " + item2.description + ", $" + item2.price + ", Size:" + item2.size);
+        item3.description = "Green Scarf";
+        item3.price = 5;
+        item3.size = "S";
 
-        System.out.println("Two T-Shirts and one Jacket ordered.");
-        total = item1.price + item2.price * 2 + ((item1.price + item2.price * 2) * TAX);
-        System.out.println("total = " + total);
+        item4.description = "Blue T-Shirt";
+        item4.price = 10.5;
+        item4.size = "S";
 
-
+        // Exercise 4.3
+//        System.out.println("item1 = " + item1.description + ", $" + item1.price + ", Size:" + item1.size);
+//        System.out.println("item2 = " + item2.description + ", $" + item2.price + ", Size:" + item2.size);
+//        total = item1.price + item2.price * 2 + ((item1.price + item2.price * 2) * TAX);
+        for (Clothing item : items) {
+            if (item.size.equals(c1.size)) {
+                System.out.println(item.description + ", $" + item.price + ", Size:" + item.size);
+                total += item.price * (1 + TAX);
+                if (total > 15) {
+                    break;
+                }
+            }
+        }
+        System.out.println("total = $" + total);
     }
 }
