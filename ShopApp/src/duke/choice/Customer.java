@@ -4,14 +4,34 @@ public class Customer {
     private String name;
     private String size;
 
+    // Exercise 5.3
+    private Clothing[] items;
+
+    // Exercise 7.1 - Catch an exception
+    public void averagePrice() {
+        try {
+//            int total = 0; // Arithmetic exception
+            double total = 0; // Returns NaN when divided by 0
+            int numItems = 0;
+            for (Clothing item : items) {
+                if (item.getSize().equals("L")) {
+                    total += item.getPrice();
+                    numItems += 1;
+                }
+            }
+
+            System.out.println("Average price of \"L\" items: $" + total/numItems);
+        } catch (ArithmeticException e) {
+            System.err.println("Error!!: " + e);
+            System.out.println("No Larges in customer's list of items");
+        }
+    }
+
     // Exercise 6.1
     public Customer(String name, int size) {
         this.name = name;
         setSize(size);
     }
-
-    // Exercise 5.3
-    private Clothing[] items;
 
     public void addItems(Clothing[] items) {
         this.items = items;

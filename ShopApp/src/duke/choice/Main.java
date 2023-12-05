@@ -62,5 +62,8 @@ public class Main {
         System.out.println("total = $" + c1.getTotalClothingCost());
 
         item4.setPrice(1);
+
+        // Exercise 7.1 Catch exception
+        c1.averagePrice();
     }
 }
