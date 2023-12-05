@@ -9,7 +9,7 @@ public class Main {
 
         // Exercise 3.1
         System.out.println("Welcome to Duke Choice Shop");
-
+        System.out.println("Tax rate is " + Clothing.TAX + ", Min price is $" + Clothing.MINIMUM_PRICE);
         // Exercise 3.2
         Customer c1 = new Customer("Pinky", 3);
 //        c1.setName("Pinky");
