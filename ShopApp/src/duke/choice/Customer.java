@@ -4,6 +4,12 @@ public class Customer {
     private String name;
     private String size;
 
+    // Exercise 6.1
+    public Customer(String name, int size) {
+        this.name = name;
+        setSize(size);
+    }
+
     // Exercise 5.3
     private Clothing[] items;
 

@@ -8,6 +8,13 @@ public class Clothing {
     final double MINIMUM_PRICE = 10.0;
     final double TAX = 0.2;
 
+    // Exercise 6.1
+    public Clothing(String description, double price, String size) {
+        this.description = description;
+        this.price = price;
+        setSize(size);
+    }
+
     // Exercise 5.1
     public String getDescription() {
         return description;
