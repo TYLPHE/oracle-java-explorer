@@ -4,6 +4,31 @@ public class Customer {
     private String name;
     private String size;
 
+    // Exercise 5.3
+    private Clothing[] items;
+
+    public void addItems(Clothing[] items) {
+        this.items = items;
+    }
+
+    public void getClothingItems() {
+        for (Clothing item : items) {
+            System.out.println("item = " + item.getDescription());
+        }
+    }
+
+    public double getTotalClothingCost() {
+        double total = 0;
+        for (Clothing item : items) {
+            total += item.getPrice();
+            if (total > 15) {
+                break;
+            }
+        }
+
+        return total;
+    }
+
     // Exercise 5.1
     public String getName() {
         return name;

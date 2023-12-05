@@ -14,7 +14,7 @@ public class Main {
         Customer c1 = new Customer();
         c1.setName("Pinky");
         c1.setSize(3);
-        System.out.println("c1.getName() = " + c1.getName());
+        System.out.println("c1.getName() = " + c1.getName() + ", Size = " + c1.getSize());
 
         // Exercise 3.3
         Clothing item1 = new Clothing();
@@ -45,17 +45,21 @@ public class Main {
 //        System.out.println("item1 = " + item1.description + ", $" + item1.price + ", Size:" + item1.size);
 //        System.out.println("item2 = " + item2.description + ", $" + item2.price + ", Size:" + item2.size);
 //        total = item1.price + item2.price * 2 + ((item1.price + item2.price * 2) * TAX);
-        for (Clothing item : items) {
-            if (item.getSize().equals(c1.getSize())) {
-                System.out.println(item.getDescription() + ", $" + item.getPrice() + ", Size:" + item.getSize());
+//        for (Clothing item : items) {
+//            if (item.getSize().equals(c1.getSize())) {
+//                System.out.println(item.getDescription() + ", $" + item.getPrice() + ", Size:" + item.getSize());
 //                total += item.getPrice() * (1 + TAX);
-                total += item.getPrice();
-                if (total > 15) {
-                    break;
-                }
-            }
-        }
-        System.out.println("total = $" + total);
+//                total += item.getPrice();
+//                if (total > 15) {
+//                    break;
+//                }
+//            }
+//        }
+//        System.out.println("total = $" + total);
+
+        c1.addItems(items);
+        c1.getClothingItems();
+        System.out.println("total = $" + c1.getTotalClothingCost());
 
         item4.setPrice(1);
     }
