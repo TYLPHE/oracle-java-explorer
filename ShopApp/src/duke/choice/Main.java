@@ -7,13 +7,16 @@ public class Main {
         double total;
         int measurement = 3;
 
+        // Exercise 3.1
         System.out.println("Welcome to Duke Choice Shop");
-        
+
+        // Exercise 3.2
         Customer c1 = new Customer();
         c1.name = "Pinky";
         c1.size = "S";
         System.out.println("c1.name = " + c1.name);
 
+        // Exercise 4.1
         switch (measurement) {
             case 1, 2, 3 -> c1.size = "S";
             case 4, 5, 6 -> c1.size = "M";
@@ -21,12 +24,16 @@ public class Main {
             default -> c1.size = "X";
         }
 
+        // Exercise 3.3
         Clothing item1 = new Clothing();
         Clothing item2 = new Clothing();
 
         item1.description = "Blue Jacket";
         item1.price = 20.9;
         item1.size = "M";
+
+        // Exercise 4.2
+        Clothing[] items = {item1, item2};
 
         item2.description = "Orange T-Shirt";
         item2.price = 10.5;
@@ -38,5 +45,7 @@ public class Main {
         System.out.println("Two T-Shirts and one Jacket ordered.");
         total = item1.price + item2.price * 2 + ((item1.price + item2.price * 2) * TAX);
         System.out.println("total = " + total);
+
+
     }
 }
