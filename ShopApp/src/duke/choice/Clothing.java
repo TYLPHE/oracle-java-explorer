@@ -16,6 +16,16 @@ public class Clothing {
         setSize(size);
     }
 
+    // Exercise 8.1 override and polymorphism
+    @Override
+    public String toString() {
+        return "Clothing{" +
+                "description='" + description + '\'' +
+                ", price=" + price +
+                ", size='" + size + '\'' +
+                '}';
+    }
+
     // Exercise 5.1
     public String getDescription() {
         return description;

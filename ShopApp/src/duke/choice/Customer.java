@@ -19,8 +19,7 @@ public class Customer {
                     numItems += 1;
                 }
             }
-
-            System.out.println("Average price of \"L\" items: $" + total/numItems);
+            System.out.println("Average price of \"L\" items: $" + total / numItems);
         } catch (ArithmeticException e) {
             System.err.println("Error!!: " + e);
             System.out.println("No Larges in customer's list of items");
@@ -39,7 +38,7 @@ public class Customer {
 
     public void getClothingItems() {
         for (Clothing item : items) {
-            System.out.println("item = " + item.getDescription());
+            System.out.println("item = " + item.toString());
         }
     }
 
