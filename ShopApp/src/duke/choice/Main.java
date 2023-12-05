@@ -1,5 +1,7 @@
 package duke.choice;
 
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -24,6 +26,8 @@ public class Main {
 
         // Exercise 4.2
         Clothing[] items = {item1, item2, item3, item4};
+        // Exercise 8.2
+        Arrays.sort(items);
 //
 //        item1.setDescription("Blue Jacket");
 //        item1.setPrice(20.9);
